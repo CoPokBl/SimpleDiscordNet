@@ -13,26 +13,31 @@ public static class CommandUtils {
         return (T) self.Data.Options.Single(option => option.Name == name).Value;
     }
     
-    private static Embed GetEmbed(string title, string body, ResponseType type) {
+    public static Embed GetEmbed(string title, string body, ResponseType type, EmbedFooterBuilder? footer = null) {
         Color color = type switch {
             ResponseType.Success => Color.Green,
             ResponseType.Error => Color.Red,
             ResponseType.Info => Color.Blue,
             _ => Color.Blue
         };
-        
-        return new EmbedBuilder()
+
+        EmbedBuilder builder = new EmbedBuilder()
             .WithTitle(title)
             .WithDescription(body)
-            .WithColor(color)
-            .Build();
+            .WithColor(color);
+
+        if (footer != null) {
+            builder.WithFooter(footer);
+        }
+
+        return builder.Build();
     }
 
     public static async Task RespondWithEmbedAsync(this SocketSlashCommand self, string title, string body, ResponseType type = ResponseType.Info, 
-        IMessageComponent[]? components = null, bool ephemeral = false) {
+        IMessageComponent[]? components = null, bool ephemeral = false, EmbedFooterBuilder? footer = null) {
         components ??= Array.Empty<IMessageComponent>();
         ComponentBuilder componentBuilder = ComponentBuilder.FromComponents(components);
-        await self.RespondAsync(embed: GetEmbed(title, body, type), components: componentBuilder.Build(), ephemeral: ephemeral);
+        await self.RespondAsync(embed: GetEmbed(title, body, type, footer), components: componentBuilder.Build(), ephemeral: ephemeral);
     }
     
     public static async Task RespondWithEmbedAsyncModal(this SocketModal self, string title, string body, ResponseType type = ResponseType.Info, 
