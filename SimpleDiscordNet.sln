@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleDiscordNet", "SimpleDiscordNet\SimpleDiscordNet.csproj", "{D8871586-698C-4F5E-B173-DAB07AC2726B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "Testing\Testing.csproj", "{EC7AF01E-29AC-40F6-8BF9-3CBA603D2C11}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D8871586-698C-4F5E-B173-DAB07AC2726B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8871586-698C-4F5E-B173-DAB07AC2726B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8871586-698C-4F5E-B173-DAB07AC2726B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8871586-698C-4F5E-B173-DAB07AC2726B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC7AF01E-29AC-40F6-8BF9-3CBA603D2C11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC7AF01E-29AC-40F6-8BF9-3CBA603D2C11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC7AF01E-29AC-40F6-8BF9-3CBA603D2C11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC7AF01E-29AC-40F6-8BF9-3CBA603D2C11}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
