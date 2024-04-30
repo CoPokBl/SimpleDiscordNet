@@ -6,6 +6,11 @@
         <Nullable>enable</Nullable>
         <Authors>CoPokBl</Authors>
         <Description>A library for quickly making a Discord bot, based on the Discord.Net package.</Description>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Title>Simple DiscordNet</Title>
+        <PackageProjectUrl>https://github.com/CoPokBl/SimpleDiscordNet</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/CoPokBl/SimpleDiscordNet</RepositoryUrl>
+        <RepositoryType>Git</RepositoryType>
     </PropertyGroup>
 
     <ItemGroup>
