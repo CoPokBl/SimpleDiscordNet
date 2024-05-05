@@ -24,9 +24,13 @@ public class SimpleDiscordBot {
     /// Creates a new instance of the SimpleDiscordBot class.
     /// </summary>
     /// <param name="token">The Discord bot token to use to authenticate.</param>
-    public SimpleDiscordBot(string token) {
+    /// <param name="intents"></param>
+    public SimpleDiscordBot(string token, GatewayIntents? intents = null) {
         Log += VoidLog;
-        Client = new DiscordSocketClient();
+        DiscordSocketConfig config = new() {
+            GatewayIntents = intents ?? GatewayIntents.AllUnprivileged
+        };
+        Client = new DiscordSocketClient(config);
 
         Login(token);
         
