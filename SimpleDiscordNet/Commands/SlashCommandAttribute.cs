@@ -10,8 +10,14 @@ public class SlashCommandAttribute : Attribute {
         Description = description;
     }
     
+    public SlashCommandAttribute(string name, string description, GuildPermission perms) {
+        Name = name;
+        Description = description;
+        RequiredPerms = perms;
+    }
+    
     public string Name { get; }
     public string Description { get; }
-    public GuildPermissions? RequiredPerms { get; }
-    
+    public GuildPermission? RequiredPerms { get; }
+
 }

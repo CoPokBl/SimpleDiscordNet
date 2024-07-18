@@ -24,7 +24,8 @@ internal static class SlashCommandHandler {
             Name = cmdAttribute.Name, 
             Description = cmdAttribute.Description, 
             Arguments = args, 
-            Function = (cmd, client) => (Task) method.Invoke(obj, new object[] {cmd, client})!
+            Function = (cmd, client) => (Task) method.Invoke(obj, new object[] {cmd, client})!,
+            RequiredPermissions = cmdAttribute.RequiredPerms
         }).ToArray();
     }
 
